@@ -11,7 +11,7 @@ export interface ISquareConfig {
     width?: number;
 }
 
-export function createSquare(config: ISquareConfig): {color: string; area: number} {
+export function createSquare(config: ISquareConfig): { color: string; area: number } {
     let newSquare = {color: "white", area: 100};
     if (config.color) {
         newSquare.color = config.color;
