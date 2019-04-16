@@ -4,6 +4,11 @@ import {greeter} from "../utils/greetings";
 import {greeterTs, Student} from "../utils/greetingsTs";
 import {printLabel, createSquare} from "../utils/interfaces";
 import {intersectionJim} from "../utils/typescriptlang/intersection-types";
+import {
+    identity as genericsIdentity,
+    loggingIdentity as genericsLoggingIdentity
+} from "../utils/typescriptlang/generics";
+import {number} from "prop-types";
 
 export interface HelloProps {
     compiler: string;
@@ -22,6 +27,10 @@ export class Hello extends React.Component<HelloProps, {}> {
         return (
             <div>
                 <h1>Test Typescript Yee..</h1>
+                <h2>Generics</h2>
+                <div>{genericsIdentity('TTTT')}</div>
+                <div>{genericsIdentity<string>('string TTTT')}</div>
+                <div>{genericsLoggingIdentity<number>([1, 2, 3])}</div>
                 <h2>Intersection Types</h2>
                 <div>{intersectionJim.name}</div>
                 <hr/>
