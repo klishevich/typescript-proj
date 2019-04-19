@@ -12,7 +12,7 @@ export interface ISquareConfig {
 }
 
 export function createSquare(config: ISquareConfig): { color: string; area: number } {
-    let newSquare = {color: "white", area: 100};
+    let newSquare = { color: 'white', area: 100 };
     if (config.color) {
         newSquare.color = config.color;
     }

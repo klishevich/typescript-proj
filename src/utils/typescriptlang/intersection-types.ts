@@ -16,8 +16,7 @@ function extend<First, Second>(first: First, second: Second): First & Second {
 }
 
 class Person {
-    constructor(public name: string) {
-    }
+    constructor(public name: string) {}
 }
 
 interface Loggable {
@@ -30,7 +29,7 @@ class ConsoleLogger implements Loggable {
     }
 }
 
-const person = new Person("Jim");
+const person = new Person('Jim');
 // console.log("person", person);
 
 export const intersectionJim = extend(person, ConsoleLogger.prototype);
