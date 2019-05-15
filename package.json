@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack --mode development --watch",
     "build": "webpack --mode production",
     "tsc": "tsc"
   },
@@ -13,6 +14,7 @@
   "license": "ISC",
   "devDependencies": {
     "awesome-typescript-loader": "^5.2.1",
+    "prettier": "^1.17.0",
     "source-map-loader": "^0.2.4",
     "ts-loader": "^5.3.3",
     "typescript": "^3.2.2",
@@ -24,5 +26,10 @@
     "@types/react-dom": "^16.0.11",
     "react": "^16.7.0",
     "react-dom": "^16.7.0"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "jsxSingleQuote": true,
+    "tabWidth": 4
   }
 }
